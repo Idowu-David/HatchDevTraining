@@ -30,3 +30,31 @@ Book:
     author: string - Author of the book
     isAvailable: boolean - indicates if the book is available for borrowing
 
+  METHODS:
+    toggleAvailability(): void - switches the availability status of the book (borrowed <-> available)
+
+
+Member:
+  This represents a registered member of the library who can borrow and return books
+  PROPERTIES:
+    id: number - Unique member ID
+    name: string - Name of the member
+    borrowedBooks: Book[] - List of books currently borrowed by the member
+  
+  METHODS:
+    borrowBook(book: Book): void - Allows the member to borrow a book if it's available
+    returnBook(book: Book): void -Allows the member to return a previously borrowed book.
+  
+Library:
+  This acts as the central manager of the system, maintaining all books and members
+  PROPERTIES:
+    books: Book[] – All books in the system
+    members: Member[] – All members of the system
+
+  METHODS:
+    addBook(book: Book): void – Adds a new book to the collection
+    addMember(member: Member): void – Registers a new member
+    findBookById(id: number): Book | undefined – Finds a book by its ID
+    findMemberById(id: number): Member | undefined – Finds a member by their ID
+    listBooks(): void – Displays all books with availability status
+    listMembers(): void – Displays all members with how many books they’ve borrowed
