@@ -1,0 +1,32 @@
+1. Library Management System
+
+Description:
+
+A simple system to manage books and members of a library using OOP principles.
+
+
+library-system/
+├── src/
+│   ├── models/
+│   │   ├── Book.ts
+│   │   ├── Member.ts
+│   │   └── Library.ts
+│   └── index.ts
+├── tsconfig.json
+├── package.json
+└── README.md
+
+Create the following classes:
+  - Book
+  - Member
+  - Library
+
+
+Book:
+  This represents a book in the library collection.
+  PROPERTIES:
+    id: number - Unique identifier for the book
+    title: string -Title of the book
+    author: string - Author of the book
+    isAvailable: boolean - indicates if the book is available for borrowing
+
