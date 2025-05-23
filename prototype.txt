@@ -43,8 +43,16 @@ Member:
   
   METHODS:
     borrowBook(book: Book): void - Allows the member to borrow a book if it's available
+      * To borrow a book:
+        check the availability of the book, if available, push the book to the borrowedBooks of the Member, else, print "not available"
+        if a book is borrowed, then it should be removed from the library.(toggleAvailability)
     returnBook(book: Book): void -Allows the member to return a previously borrowed book.
-  
+      * To return a book:
+        change the state of the Book(isAvailable becomes true)
+        get the index of the borrowed book and remove it from the list.
+        add the book back to the library.
+        update the state of the Member object(remove the book from their borrowed books)
+ 
 Library:
   This acts as the central manager of the system, maintaining all books and members
   PROPERTIES:
